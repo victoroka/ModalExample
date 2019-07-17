@@ -12,6 +12,7 @@
 		841714D022DE82B500B4F6E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841714CE22DE82B500B4F6E4 /* Main.storyboard */; };
 		841714D222DE82B600B4F6E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 841714D122DE82B600B4F6E4 /* Assets.xcassets */; };
 		841714D522DE82B600B4F6E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841714D322DE82B600B4F6E4 /* LaunchScreen.storyboard */; };
+		841714DD22DE97A000B4F6E4 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841714DC22DE97A000B4F6E4 /* ModalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		841714D122DE82B600B4F6E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		841714D422DE82B600B4F6E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		841714D622DE82B600B4F6E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		841714DC22DE97A000B4F6E4 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				841714CA22DE82B500B4F6E4 /* AppDelegate.swift */,
 				841714CC22DE82B500B4F6E4 /* ViewController.swift */,
+				841714DC22DE97A000B4F6E4 /* ModalViewController.swift */,
 				841714CE22DE82B500B4F6E4 /* Main.storyboard */,
 				841714D122DE82B600B4F6E4 /* Assets.xcassets */,
 				841714D322DE82B600B4F6E4 /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				841714CD22DE82B500B4F6E4 /* ViewController.swift in Sources */,
+				841714DD22DE97A000B4F6E4 /* ModalViewController.swift in Sources */,
 				841714CB22DE82B500B4F6E4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,124 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ModalExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vel-TX-QlP">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="115"/>
+                                <color key="backgroundColor" red="0.4392156862745098" green="0.29019607843137252" blue="1" alpha="0.79511443661971826" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="115" id="E2r-Wa-E3I"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modal Example App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Oy-Ou-aVv">
+                                <rect key="frame" x="105" y="195" width="204" height="31"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpw-X3-0C6">
+                                <rect key="frame" x="132" y="526" width="150" height="60"/>
+                                <color key="backgroundColor" red="0.6705882352941176" green="0.58039215686274503" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="BTH-id-gE1"/>
+                                    <constraint firstAttribute="width" constant="150" id="xkm-Jd-ogm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Press here!"/>
+                                <connections>
+                                    <segue destination="8K7-4Q-CgD" kind="presentation" modalPresentationStyle="overCurrentContext" id="Itl-pK-FGe"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Vel-TX-QlP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0UO-B4-uFv"/>
+                            <constraint firstItem="cpw-X3-0C6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1ag-HL-5vK"/>
+                            <constraint firstItem="5Oy-Ou-aVv" firstAttribute="top" secondItem="Vel-TX-QlP" secondAttribute="bottom" constant="80" id="Fer-Cv-Q0q"/>
+                            <constraint firstItem="cpw-X3-0C6" firstAttribute="top" secondItem="5Oy-Ou-aVv" secondAttribute="bottom" constant="300" id="LL9-3A-Tde"/>
+                            <constraint firstItem="5Oy-Ou-aVv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TDY-ZR-UhH"/>
+                            <constraint firstItem="Vel-TX-QlP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qud-ip-FlI"/>
+                            <constraint firstItem="Vel-TX-QlP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="v7W-pH-A0d"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="pressHereButton" destination="cpw-X3-0C6" id="7c6-iQ-YfN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="119.86607142857142"/>
+        </scene>
+        <!--Modal View Controller-->
+        <scene sceneID="VhE-0C-i74">
+            <objects>
+                <viewController id="8K7-4Q-CgD" customClass="ModalViewController" customModule="ModalExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xUS-ic-mR8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CYn-Ey-zl1">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.35035211267605626" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZXv-tS-pdr">
+                                <rect key="frame" x="0.0" y="179" width="414" height="717"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a modal view!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLp-Mx-ZWx">
+                                        <rect key="frame" x="114" y="140" width="186" height="28"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sxr-K8-aVV">
+                                        <rect key="frame" x="325" y="15" width="74" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="GoA-83-e3x"/>
+                                            <constraint firstAttribute="width" constant="74" id="QuD-ib-xkc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                        <state key="normal" title="Close"/>
+                                        <connections>
+                                            <action selector="closeButtonPressed:" destination="8K7-4Q-CgD" eventType="touchUpInside" id="vHm-2q-00N"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="sxr-K8-aVV" firstAttribute="top" secondItem="ZXv-tS-pdr" secondAttribute="top" constant="15" id="1jM-cm-ZxB"/>
+                                    <constraint firstItem="cLp-Mx-ZWx" firstAttribute="centerX" secondItem="ZXv-tS-pdr" secondAttribute="centerX" id="1qV-cC-LaV"/>
+                                    <constraint firstAttribute="trailing" secondItem="sxr-K8-aVV" secondAttribute="trailing" constant="15" id="Zfm-s9-x8p"/>
+                                    <constraint firstItem="cLp-Mx-ZWx" firstAttribute="top" secondItem="ZXv-tS-pdr" secondAttribute="top" constant="140" id="cPS-kk-zh1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZXv-tS-pdr" firstAttribute="trailing" secondItem="BKt-Q7-kYm" secondAttribute="trailing" id="5mo-Ks-ziS"/>
+                            <constraint firstItem="ZXv-tS-pdr" firstAttribute="height" secondItem="CYn-Ey-zl1" secondAttribute="height" multiplier="0.8" id="IKk-Ag-xld"/>
+                            <constraint firstAttribute="bottom" secondItem="ZXv-tS-pdr" secondAttribute="bottom" id="KBq-eQ-aKc"/>
+                            <constraint firstItem="CYn-Ey-zl1" firstAttribute="leading" secondItem="BKt-Q7-kYm" secondAttribute="leading" id="KOQ-GO-sqv"/>
+                            <constraint firstAttribute="bottom" secondItem="CYn-Ey-zl1" secondAttribute="bottom" id="SaC-00-Mfo"/>
+                            <constraint firstItem="CYn-Ey-zl1" firstAttribute="top" secondItem="xUS-ic-mR8" secondAttribute="top" id="dzP-Uc-55X"/>
+                            <constraint firstItem="ZXv-tS-pdr" firstAttribute="leading" secondItem="BKt-Q7-kYm" secondAttribute="leading" id="hHz-an-7cw"/>
+                            <constraint firstItem="CYn-Ey-zl1" firstAttribute="trailing" secondItem="BKt-Q7-kYm" secondAttribute="trailing" id="hzA-R8-8O1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BKt-Q7-kYm"/>
+                    </view>
+                    <connections>
+                        <outlet property="blackView" destination="CYn-Ey-zl1" id="tGl-qv-OcK"/>
+                        <outlet property="closeButton" destination="sxr-K8-aVV" id="7x9-Hp-crl"/>
+                        <outlet property="modalView" destination="ZXv-tS-pdr" id="aJN-cP-JdD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PZu-kV-I9h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1089.8550724637682" y="119.86607142857142"/>
         </scene>
     </scenes>
 </document>
